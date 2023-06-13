@@ -1,0 +1,97 @@
+$ruler: 16px;
+$color-red: #AE1100;
+$color-bg: #EBECF0;
+$color-shadow: #BABECC;
+$color-white: #FFF;
+$input-height: 60px;
+
+@mixin onDesktop {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactUs-wrap {
+  border: none;
+}
+
+.input {
+  border: 0;
+  outline: 0;
+  height: $input-height;
+  font-size: $ruler;
+  border-radius: $ruler*20;
+  padding: $ruler;
+  background-color:$color-bg;
+  text-shadow: 1px 1px 0 $color-white;
+  box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+  @include onDesktop {
+    width: 80%;
+  margin: 0 auto;
+  }
+}
+
+.input:hover {
+  box-shadow:  inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-white;
+}
+
+.textarea {
+  border: 0;
+  outline: 0;
+  height: $input-height * 3;
+  font-size: $ruler;
+  border-radius: $ruler*2;
+  padding: $ruler;
+  background-color:$color-bg;
+  text-shadow: 1px 1px 0 $color-white;
+  box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+  text-decoration: none;
+  resize: none;
+  @include onDesktop {
+    width: 80%;
+  margin: 0 auto;
+  }
+}
+
+.textarea:hover {
+  box-shadow:  inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-white;
+}
+
+.error_message {
+  margin: 0;
+  text-align: center;
+  color: #AE1100;
+  font-size: 12px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.isErrorName {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.isErrorEmail {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.isErrorText {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.dark {
+  border: 1px solid lightblue;
+  box-shadow: -2px -2px 5px grey, 2px 2px 5px #8667;
+}
+
+.isDarkModeP {
+  color: lightblue;
+}

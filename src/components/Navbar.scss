@@ -1,0 +1,70 @@
+@mixin onDesktop {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
+
+nav {
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  z-index: 202220;
+  position: relative;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.socialsWrap {
+  display: flex;
+  margin: 20px;
+}
+
+.nav-body {
+  transform: translateX(-200vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 65%;
+  height: 80vh;
+  background-color: #ececee;
+  border-right: 1px solid #929293;
+  border-bottom: 1px solid #929293;
+  border-bottom-right-radius: 40px;
+  pointer-events: all;
+  z-index: 14364;
+  position: absolute;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Source Code Pro', monospace;
+  color: #000;
+  font-size: 40px;
+  z-index: 20000000;
+  position: relative;
+  @include onDesktop {
+    font-size: 60px;
+    z-index: 20000000;
+    position: relative;
+  }
+}
+.a:hover {
+  text-decoration: underline;
+  box-shadow: rgb(173, 216, 230) 0px 50px 100px -20px,
+    rgb(173, 216, 230) 0px 30px 60px -30px;
+  transition: 0.3s;
+}
+
+.isDarkModee {
+  background-color: #353646;
+  color: lightblue;
+  transition: 300ms;
+  border-color: lightblue;
+  z-index: 1000000;
+}

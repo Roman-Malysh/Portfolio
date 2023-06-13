@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.button {
+  width: 270px;
+  height: 80px;
+  border: none;
+  outline: none;
+  background: #2f2f2f;
+  color: #fff;
+  font-size: 22px;
+  border-radius: 40px;
+  border-color: #353646;
+  text-align: center;
+  box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.button:hover {
+  background-color: lightblue;
+  transition: 0.3s;
+}
+
+.check-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  position: absolute;
+  top: 0;
+  right: -40px;
+  opacity: 0;
+  transition: 1s;
+}
+
+.check-box svg {
+  width: 40px;
+  margin: 20px;
+}
+
+svg path {
+  stroke-width: 3;
+  stroke: #fff;
+  stroke-dasharray: 34;
+  stroke-dashoffset: 34;
+  stroke-linecap: round;
+}
+
+.active {
+  background: lightblue;
+  transition: 1s;
+}
+
+.error {
+  background: #CD5C5C;
+  transition: 1s;
+}
+
+.error .check-box {
+
+}
+
+.error p {
+  margin-right: 125px;
+  transition: 1s;
+}
+
+.error svg path {
+}
+
+.active .check-box {
+  right: 0;
+  opacity: 1;
+  transition: 1s;
+}
+
+.active p {
+  margin-right: 125px;
+  transition: 1s;
+}
+
+.active svg path {
+  stroke-dashoffset: 0;
+  transition: 1s;
+  transition-delay: 1s;
+}
+
+.dark {
+  border: 1px solid lightblue;
+}
+
+.divButton {
+  display: flex;
+}
