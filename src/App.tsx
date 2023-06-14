@@ -113,7 +113,7 @@ export const App: React.FC = () => {
               style={{marginTop: '80px', marginBottom: '80px'}}
               className='appearance lalita'
               href='./CV_Roman_Malysh[React_Developer].pdf'
-              download='CV_Roman_Malysh[React_Developer].pdf'
+              download
             >
               <SCSSButton
                 isDarkMode={isDarkMode}

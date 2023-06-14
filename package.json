@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://roman-malysh.github.io/CV-React-Developer/",
+  "homepage": "https://roman-malysh.github.io/Portfolio/",
   "dependencies": {
     "@coreui/react": "^4.8.0",
     "@emailjs/browser": "^3.11.0",
