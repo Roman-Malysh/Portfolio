@@ -7,9 +7,24 @@
 }
 
 .container {
-
+	animation: opacityBirds 13s forwards;
 }
 
+@keyframes opacityBirds {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.1;
+    
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .bird {
 	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
 	background-size: auto 100%;

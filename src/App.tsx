@@ -47,7 +47,7 @@ export const App: React.FC = () => {
   };
   return (
     <>
-      <body className={classNames('body', {isDarkMode})}>
+      <body className={classNames('body appearBody', {isDarkMode})}>
         <div style={{position: 'absolute', top: '200px'}}>
         <BirdContainer />
         </div>
@@ -112,8 +112,8 @@ export const App: React.FC = () => {
             <a
               style={{marginTop: '80px', marginBottom: '80px'}}
               className='appearance lalita'
-              href='my-app/src/CVRoman_Malysh[React_Developer].pdf'
-              download
+              href='CV_Roman_Malysh[React_Developer].pdf'
+              download={true}
             >
               <SCSSButton
                 isDarkMode={isDarkMode}

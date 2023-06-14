@@ -1,9 +1,8 @@
 import React, {FormEvent, useRef, useState} from 'react';
-import { SCSSButton} from './SCSSButton';
+import {SCSSButton} from './SCSSButton';
 import emailjs from '@emailjs/browser';
 import './ContactUs.scss';
 import classNames from 'classnames';
-
 
 export const ContactUs = ({isDarkMode}) => {
   const [isErrorName, setIsErrorName] = useState(false);
@@ -12,12 +11,14 @@ export const ContactUs = ({isDarkMode}) => {
   const [buttonSuccess, setButton] = useState(false);
   const [buttonError, setIsError] = useState(false);
   const [name, setName] = useState('');
-  const [title, setTitle] = useState('send')
+  const [title, setTitle] = useState('send');
   const [email, setEmail] = useState('');
   const [textArea, setTextArea] = useState('');
   const form = useRef();
 
-  const emailPattern = email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
+  const emailPattern = email.match(
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+  );
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -70,7 +71,7 @@ export const ContactUs = ({isDarkMode}) => {
       <input
         type='text'
         name='user_name'
-        className={classNames('input',{'dark': isDarkMode})}
+        className={classNames('input', {dark: isDarkMode})}
         placeholder='Enter your name'
         onChange={(e) => {
           setName(e.target.value);
@@ -80,11 +81,18 @@ export const ContactUs = ({isDarkMode}) => {
           setTitle('send');
         }}
       />
-      <p className={classNames('error_message', {'isErrorName':isErrorName, 'isDarkModeP': isDarkMode})}>Enter your name</p>
+      <p
+        className={classNames('error_message', {
+          isErrorName: isErrorName,
+          isDarkModeP: isDarkMode,
+        })}
+      >
+        Enter your name
+      </p>
       <input
         type='text'
         name='user_email'
-        className={classNames('input',{'dark': isDarkMode})}
+        className={classNames('input', {dark: isDarkMode})}
         placeholder='Enter your email'
         onChange={(e) => {
           setEmail(e.target.value);
@@ -94,39 +102,55 @@ export const ContactUs = ({isDarkMode}) => {
           setTitle('send');
         }}
       />
-      <p className={classNames('error_message', {isErrorEmail, 'isDarkModeP': isDarkMode})}>Enter valid email</p>
+      <p
+        className={classNames('error_message', {
+          isErrorEmail,
+          isDarkModeP: isDarkMode,
+        })}
+      >
+        Enter valid email
+      </p>
       <textarea
         name='message'
-        className={classNames('textarea',{'dark': isDarkMode})}
+        className={classNames('textarea', {dark: isDarkMode})}
         placeholder='Enter your message'
         onChange={(e) => {
           setTextArea(e.target.value);
-          setIsErrorText(false)
+          setIsErrorText(false);
           setButton(false);
           setIsError(false);
           setTitle('send');
         }}
       />
-      <p className={classNames('error_message', {isErrorText, 'isDarkModeP': isDarkMode})}>Your message has to be 4 digits at least</p>
+      <p
+        className={classNames('error_message', {
+          isErrorText,
+          isDarkModeP: isDarkMode,
+        })}
+      >
+        Your message has to be 4 digits at least
+      </p>
       <button
         className={classNames('contactUs-wrap', {isDarkMode})}
         type='submit'
       >
         <div className='containerR'>
-      <button
-        id='btn'
-        className={classNames('button', {'active': buttonSuccess, 'error': buttonError, 'dark': isDarkMode})}
-        onClick={() => {
-        }}
-      >
-        <p id='btnText'>{title}</p>
-        <div className='check-box'>
-          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'>
-            <path fill='transparent' d='M14.1 27.2l7.1 7.2 16.7-16.8' />
-          </svg>
+          <button
+            id='btn'
+            className={classNames('button', {
+              active: buttonSuccess,
+              error: buttonError,
+              dark: isDarkMode,
+            })}
+          >
+            <p id='btnText'>{title}</p>
+            <div className='check-box'>
+              <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'>
+                <path fill='transparent' d='M14.1 27.2l7.1 7.2 16.7-16.8' />
+              </svg>
+            </div>
+          </button>
         </div>
-      </button>
-    </div>
       </button>
     </form>
   );

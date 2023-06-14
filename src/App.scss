@@ -558,3 +558,28 @@ section {
 .appearance {
   animation: Appear 13s linear;
 }
+
+.appearBody {
+  animation: body 13s linear;
+}
+
+@keyframes body {
+  0% {
+    background-color: #ececee;
+  }
+  25% {
+    background-color: #888888;
+  }
+  50% {
+    background-color: #A9A9A9;
+  }
+  80% {
+    background-color: 	#E0E0E0;
+  }
+  80% {
+    background-color: 		#F5FFFA
+  }
+  100% {
+    background-color: #ececee;
+  }
+}
