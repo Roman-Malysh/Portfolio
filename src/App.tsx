@@ -9,6 +9,8 @@ import {TypeAnimation} from 'react-type-animation';
 import VisibilitySensor from 'react-visibility-sensor';
 import disableScroll from 'disable-scroll';
 import './App.scss';
+import '../src/components/Appearance.scss';
+import '../src/components/isDarkMode.scss';
 import {Card} from './components/Card';
 import {Cardd} from './components/Cardd';
 import {SCSSButton} from './components/SCSSButton';
@@ -16,7 +18,7 @@ import {Button} from './components/Button';
 import {SocialIcon} from './components/SocialIcon';
 import {Massage} from './components/Massage';
 import {ContactUs} from './components/ContactUS';
-import { BirdContainer } from './components/BirdContainer';
+import {BirdContainer} from './components/BirdContainer';
 
 export const App: React.FC = () => {
   const [isDarkMode, setDarkMode] = useState(false);
@@ -37,7 +39,7 @@ export const App: React.FC = () => {
       disableScroll.on();
       setTimeout(() => {
         disableScroll.off();
-      }, 11000);
+      }, 6000);
     };
     blockScroll();
   }, []);
@@ -47,12 +49,12 @@ export const App: React.FC = () => {
   };
   return (
     <>
-      <body className={classNames('body appearBody', {isDarkMode})}>
+      <body className={classNames('body', {isDarkMode})}>
         <div style={{position: 'absolute', top: '200px'}}>
-        <BirdContainer />
+          <BirdContainer />
         </div>
         <div style={{position: 'absolute', top: '400px'}}>
-        <BirdContainer />
+          <BirdContainer />
         </div>
         <div id='test'></div>
         <header className={classNames({isDarkMode})}>
@@ -80,39 +82,43 @@ export const App: React.FC = () => {
         </header>
         <main className={classNames({isNavOpen})}>
           <>
-            <TypeAnimation
-              sequence={[
-                100,
-                'Hi! My name is Roman.',
-                100,
-                'I`m',
-                100,
-                'I`m a Web Developer....',
-                100,
-                'I`m',
-                100,
-                'I`m a marketing specialist....',
-                300,
-                'I`m a human....',
-                300,
-                'Roman Malysh' + '- React developer',
-              ]}
-              wrapper='span'
-              cursor={true}
-              repeat={0}
-              style={{
-                fontSize: '20px',
-                display: 'inline-block',
-                zIndex: '100',
-                textAlign: 'center',
-                height: '100px',
-              }}
-            />
+            <div
+              className='textWrapper'
+            >
+              <TypeAnimation
+                sequence={[
+                  100,
+                  'Hi! My name is Roman.',
+                  100,
+                  'I`m',
+                  100,
+                  'I`m a Web Developer....',
+                  100,
+                  'I`m',
+                  100,
+                  'I`m a marketing specialist....',
+                  300,
+                  'I`m a human....',
+                  300,
+                  'Roman Malysh' + '- React developer',
+                ]}
+                wrapper='p'
+                cursor={true}
+                repeat={0}
+                style={{
+                  fontSize: '20px',
+                  display: 'inline-block',
+                  zIndex: '100',
+                  textAlign: 'center',
+                  height: '100px',
+                }}
+              />
+            </div>
             <div className={classNames('photo appearance', {isNavOpen})}></div>
             <a
               style={{marginTop: '80px', marginBottom: '80px'}}
               className='appearance lalita'
-              href='./CV_Roman_Malysh[React_Developer].pdf'
+              href='https://drive.google.com/file/d/1mkwLD3LnFAM2LEwIzLTfJtTCg3uLxg4S/view?usp=sharing'
               download
             >
               <SCSSButton

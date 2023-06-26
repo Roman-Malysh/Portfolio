@@ -7,7 +7,7 @@
 }
 
 .container {
-	animation: opacityBirds 6s forwards;
+	animation: opacityBirds 5s forwards;
 }
 
 @keyframes opacityBirds {
@@ -72,23 +72,23 @@
 	animation-iteration-count: 1s;
 	
 	&--one {
-		animation-duration: 15s;
+		animation-duration: 6s;
 		animation-delay: 0;
 	}
 	
 	&--two {
-		animation-duration: 16s;
+		animation-duration: 6s;
 		animation-delay: 1s;
 	}
 	
 	&--three {
-		animation-duration: 14.6s;
-		animation-delay: 9.5s;
+		animation-duration: 6s;
+		animation-delay: 6s;
 	}
 	
 	&--four {
-		animation-duration: 16s;
-		animation-delay: 10.25s;
+		animation-duration: 6s;
+		animation-delay: 6s;
 	}
 	
 }
@@ -108,28 +108,28 @@
 	}
 	
 	10% {
-		transform: translateY(2vh) translateX(10vw) scale(0.4);
+		transform: translateY(2vh) translateX(5vw) scale(0.4);
 	}
 	
 	20% {
-		transform: translateY(0vh) translateX(30vw) scale(0.5);
+		transform: translateY(0vh) translateX(20vw) scale(0.5);
 	}
 	
 	30% {
-		transform: translateY(4vh) translateX(50vw) scale(0.6);
+		transform: translateY(4vh) translateX(35vw) scale(0.6);
 	}
 	
 	40% {
-		transform: translateY(2vh) translateX(70vw) scale(0.6);
+		transform: translateY(2vh) translateX(50vw) scale(0.6);
 	}
 	
 	50% {
-		transform: translateY(0vh) translateX(90vw) scale(0.6);
+		transform: translateY(0vh) translateX(70vw) scale(0.6);
     opacity: 0.5;
 	}
 	
 	60% {
-		transform: translateY(0vh) translateX(110vw) scale(0.6);
+		transform: translateY(0vh) translateX(90vw) scale(0.6);
 	}
 	
 	100% {

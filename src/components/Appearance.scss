@@ -1,0 +1,21 @@
+@keyframes Appear {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.appearance {
+  animation: Appear 6s linear;
+}
