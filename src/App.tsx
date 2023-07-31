@@ -122,7 +122,7 @@ export const App: React.FC = () => {
             <a
               style={{marginTop: '80px', marginBottom: '80px'}}
               className='appearance lalita'
-              href='https://raw.githubusercontent.com/Roman-Malysh/Portfolio/main/RomanMalyshReactDeveloper.pdf'
+              href='https://github.com/Roman-Malysh/Portfolio/raw/main/RomanMalysh%5BFrontEndDeveloper%5D.pdf'
               download
             >
               <SCSSButton
