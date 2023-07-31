@@ -1,11 +1,7 @@
+@import '../src/components/Mixins.scss';
+
 * {
   font-family: 'Nunito Sans', sans-serif;
-}
-
-@mixin onDesktop {
-  @media (min-width: 1000px) {
-    @content;
-  }
 }
 
 html,
@@ -19,9 +15,16 @@ body,
 
 main {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 30px;
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
+  @include onDesktop() {
+    margin: 0 auto;
+  }
 }
 
 h1 h2 h3 h4 {
@@ -76,7 +79,7 @@ h1 h2 h3 h4 {
 header {
   position: sticky;
   top: 0;
-  padding: 0 30px;
+  padding: 0 25px;
   z-index: 100000000;
   @include onDesktop {
     padding: 0 60px;
@@ -124,7 +127,7 @@ header {
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
-  z-index: 2000000;
+  z-index: 200000000;
   background-color: #ececee;
   position: relative;
 }
@@ -401,14 +404,6 @@ body,
   }
 }
 
-main {
-  padding: 0 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: 0.3s;
-}
-
 .work-card-wrap {
   display: flex;
   width: max-content;
@@ -492,6 +487,7 @@ section {
 }
 
 #works {
+  width: 100%;
   @include onDesktop {
     display: flex;
     flex-direction: row;
@@ -502,4 +498,21 @@ section {
 
 .textWrapper {
   transition: 0.3s;
+}
+
+.grid-tablet {
+  @include onTablet {
+    display: grid;
+    width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  }
+}
+
+.grid-desktop {
+  @include onDesktop {
+    display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  }
 }

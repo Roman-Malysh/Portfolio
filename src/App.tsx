@@ -19,6 +19,12 @@ import {SocialIcon} from './components/SocialIcon';
 import {Massage} from './components/Massage';
 import {ContactUs} from './components/ContactUS';
 import {BirdContainer} from './components/BirdContainer';
+import Todos from './todos.png';
+import Sentda from './sentda.png';
+import htmlCss from './htmlCSSJS.png';
+import ReactTS from './reactTS.png';
+import ReactLogo from './ReactLogo.png';
+import Post from 'https://w7.pngwing.com/pngs/23/818/png-transparent-new-post-lettering-text.png';
 
 export const App: React.FC = () => {
   const [isDarkMode, setDarkMode] = useState(false);
@@ -82,9 +88,7 @@ export const App: React.FC = () => {
         </header>
         <main className={classNames({isNavOpen})}>
           <>
-            <div
-              className='textWrapper'
-            >
+            <div className='textWrapper'>
               <TypeAnimation
                 sequence={[
                   100,
@@ -154,38 +158,48 @@ export const App: React.FC = () => {
           </section>
           <h2 className='section_h2'>Featured works</h2>
           <section id='works'>
-            <Cardd
-              url='https://i.ibb.co/18sKk0D/Screenshot-2023-06-07-at-19-54-19-2.png'
-              text='Sumy Progress Detailing'
-              tech='HTML5/SCSS'
-              icon='https://www.pngfind.com/pngs/m/683-6834215_html-css-js-icon-hd-png-download.png'
-              webLink='https://progressdetailing.com.ua/'
-              isDarkMode={isDarkMode}
-            />
-            <Cardd
-              url='https://www.freakyjolly.com/wp-content/uploads/2019/03/todo.gif'
-              text='Lists of Posts with API'
-              tech='React/TypeScript/SCSS'
-              icon='https://repository-images.githubusercontent.com/318576591/a7182780-3625-11eb-925d-adc07c4e5e7c'
-              webLink='https://roman-malysh.github.io/react_dynamic-list-of-posts/'
-              isDarkMode={isDarkMode}
-            />
-            <Cardd
-              url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN2MWwvfDM72CSw9gBm3wjZAhn0iqhz1YTUMkYjiVunPVAH7ABY8M2RJ0Gz3t1ZHTXqgs&usqp=CAU'
-              text='MiBike'
-              tech='HTML5/SCSS/JS'
-              icon='https://www.pngfind.com/pngs/m/683-6834215_html-css-js-icon-hd-png-download.png'
-              webLink='https://roman-malysh.github.io/layout_miami/'
-              isDarkMode={isDarkMode}
-            />
-            <Cardd
-              url='https://cloudinary.time2hack.com/upload/todo-app.png'
-              text='List of Todos with API'
-              tech='React/TypeScript/SCSS'
-              icon='https://repository-images.githubusercontent.com/318576591/a7182780-3625-11eb-925d-adc07c4e5e7c'
-              webLink='https://roman-malysh.github.io/react_todo-app-with-api/'
-              isDarkMode={isDarkMode}
-            />
+            <div className='grid-tablet grid-desktop'>
+              <Cardd
+                url='https://static.vecteezy.com/system/resources/previews/013/923/543/original/blue-car-logo-png.png'
+                isDarkMode={isDarkMode}
+                position='center'
+                title='ProgressDetailing'
+                websiteLink='https://progressdetailing.com.ua/'
+                tech={htmlCss}
+              />
+              <Cardd
+                url='https://cdn.cdnlogo.com/logos/p/36/perl-programming-language.svg'
+                isDarkMode={isDarkMode}
+                position='center'
+                title='ListOfPostsWithAPI'
+                websiteLink='https://roman-malysh.github.io/react_dynamic-list-of-posts/'
+                tech={htmlCss}
+              />
+              <Cardd
+                url='https://trianglebikeway.com/images/biker.svg'
+                isDarkMode={isDarkMode}
+                position='left'
+                title='PedalParadise'
+                websiteLink='https://roman-malysh.github.io/layout_miami/'
+                tech={htmlCss}
+              />
+              <Cardd
+                url='https://cdn1.iconfinder.com/data/icons/calendar-66/48/14_up_increase_clock_time_alarm_watch-512.png'
+                isDarkMode={isDarkMode}
+                position='left'
+                title='TaskReminder'
+                websiteLink='https://roman-malysh.github.io/react_todo-app-loading-todos/'
+                tech={htmlCss}
+              />
+              <Cardd
+                url={Sentda}
+                isDarkMode={isDarkMode}
+                position='left'
+                title='Sentda.com'
+                websiteLink='https://roman-malysh.github.io/sentdaproject/#/'
+                tech={ReactTS}
+              />
+            </div>
           </section>
           <section>
             <h2 className='section_h2'>Technologies & skills</h2>

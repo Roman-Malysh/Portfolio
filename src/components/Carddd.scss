@@ -1,120 +1,47 @@
-@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
-
-@mixin onDesktop {
-  @media (min-width: 1000px) {
-    @content;
-  }
-}
-
-figure.snip1321 {
-  font-family: 'Raleway', Arial, sans-serif;
-  position: relative;
-  overflow: hidden;
-  margin: 10px;
-  height: 200px;
-  width: 200px;
-  color: #000000;
-  text-align: center;
-  -webkit-perspective: 50em;
-  perspective: 50em;
-  border-radius: 50%;
-  margin: 10px;
-  box-shadow: lightblue 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-}
-figure.snip1321 * {
-  -webkit-box-sizing: padding-box;
-  box-sizing: padding-box;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-figure.snip1321 img {
-  max-width: 100%;
-  vertical-align: top;
-}
-figure.snip1321 figcaption {
-  top: 50%;
-  left: 20px;
-  right: 20px;
-  position: absolute;
-  opacity: 0;
-  z-index: 1;
-  border-radius: 50%;
-}
-figure.snip1321 h2,
-figure.snip1321 h4 {
-  margin: 0;
-  font-size: 10px;
-}
-figure.snip1321 h2 {
-  font-weight: 600;
-}
-figure.snip1321 h4 {
-  font-weight: 400;
-  text-transform: uppercase;
-}
-figure.snip1321 i {
-  font-size: 22px;
-}
-figure.snip1321:after {
-  background-color: #ffffff;
-  border-radius: 50%;
-  position: absolute;
-  content: "";
-  display: block;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  -webkit-transform: rotateX(-90deg);
-  transform: rotateX(-90deg);
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  opacity: 0;
-}
-figure.snip1321 a {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  z-index: 1;
-}
-figure.snip1321:hover figcaption,
-figure.snip1321.hover figcaption {
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  opacity: 1;
-  -webkit-transition-delay: 0.2s;
-  transition-delay: 0.2s;
-}
-figure.snip1321:hover:after,
-figure.snip1321.hover:after {
-  -webkit-transform: rotateX(0);
-  transform: rotateX(0);
-  opacity: 0.9;
-}
-
-.ion-circle {
-  width: auto;
-  height: 40px;
-  padding: 0;
-  margin-bottom: 5px;
-  object-fit: cover;
-  object-position: center;
-}
-
-.link {
-  font-size: 10px;
-  text-align: center;
-  transition: 0.3s;
-}
+@import './Mixins.scss';
 
 .wrap {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  justify-content: end;
+  height: 400px;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.03);
+  }
+  @include onTablet {
+    margin-bottom: 0;
+  }
+}
+
+.img {
+  width: 100px;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+}
+
+.card__link {
+  font-size: 15px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.card__title {
+  font-size: 20px;
+}
+
+.card__tech {
+  width: 60%;
+  background-color: transparent;
 }
