@@ -20,11 +20,12 @@ import {Massage} from './components/Massage';
 import {ContactUs} from './components/ContactUS';
 import {BirdContainer} from './components/BirdContainer';
 import Todos from './todos.png';
-import Sentda from './sentda.png';
+import Atarrago from './Attarago (1).png';
 import htmlCss from './htmlCSSJS.png';
 import ReactTS from './reactTS.png';
 import ReactLogo from './ReactLogo.png';
 import Post from 'https://w7.pngwing.com/pngs/23/818/png-transparent-new-post-lettering-text.png';
+import gitIcon from './gitIcon.png';
 
 export const App: React.FC = () => {
   const [isDarkMode, setDarkMode] = useState(false);
@@ -159,6 +160,22 @@ export const App: React.FC = () => {
           <h2 className='section_h2'>Featured works</h2>
           <section id='works'>
             <div className='grid-tablet grid-desktop'>
+            <Cardd
+                url={gitIcon}
+                isDarkMode={isDarkMode}
+                position='left'
+                title='Github user searcher'
+                websiteLink='https://roman-malysh.github.io/GitHubSearcher/'
+                tech={ReactTS}
+              />
+              <Cardd
+                url={Atarrago}
+                isDarkMode={isDarkMode}
+                position='left'
+                title='Atarrago.com'
+                websiteLink='https://atarrago.com/'
+                tech={ReactTS}
+              />
               <Cardd
                 url='https://static.vecteezy.com/system/resources/previews/013/923/543/original/blue-car-logo-png.png'
                 isDarkMode={isDarkMode}
@@ -190,14 +207,6 @@ export const App: React.FC = () => {
                 title='TaskReminder'
                 websiteLink='https://roman-malysh.github.io/react_todo-app-loading-todos/'
                 tech={htmlCss}
-              />
-              <Cardd
-                url={Sentda}
-                isDarkMode={isDarkMode}
-                position='left'
-                title='Sentda.com'
-                websiteLink='https://roman-malysh.github.io/sentdaproject/#/'
-                tech={ReactTS}
               />
             </div>
           </section>
